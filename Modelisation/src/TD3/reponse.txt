@@ -1,0 +1,33 @@
+1) f() compile sans problème car RunTimeExcpt n'a pas besoin de throw pour être levée.
+f2() lance une erreur car on lève une excpetion avec throw sans s du coup ça lève
+
+On devrait mettre throws IOExcpetion pour déclarer que cette méthode est suceptible de lancer une excepetion.
+
+2)
+Exc3  :
+
+"Début f3"
+"Début f4"
+"Début f5"
+    e: Exc3
+    "Finnaly f4"
+    "Finnaly f3"
+    <interruption du problème>
+
+Exc31  :
+"Début f3"
+"Début f4"
+"Début f5"
+    e: Exc31
+    "finally f4"
+    "Exc31"
+    "finally f3"
+    "suite de f3"
+
+Exc311  :
+"Début f3"
+"Début f4"
+"Début f5"
+    idem de Exc31 sauf le nom de la casse
+
+.....
