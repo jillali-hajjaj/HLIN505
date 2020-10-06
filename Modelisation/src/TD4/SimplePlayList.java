@@ -24,11 +24,12 @@ public class SimplePlayList extends AbstractAudioElement implements Playlist{
             }
         }
         else {
-            File playlist = new File(path);
+            File playlist = new File("./Modelisation/src/TD4/",title +".txt");
             try {
                 playlist.createNewFile();
                 super.setFile(playlist);
-                BufferedWriter fichier = new BufferedWriter(new FileWriter(path));
+                BufferedWriter fichier = new BufferedWriter(new FileWriter(title +".txt"));
+                System.out.println("tittre : "+title);
                 fichier.write(title);
             } catch (IOException e) {
                 e.printStackTrace();
