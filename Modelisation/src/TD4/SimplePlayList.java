@@ -8,7 +8,7 @@ public class SimplePlayList extends AbstractAudioElement implements Playlist{
     public SimplePlayList(String title, String path) throws IOException{
         super(title, path);
         playlist = new ArrayList<Song>();
-        if(new File(path).exists()){
+        if(getFile().exists()){
             BufferedReader file = new BufferedReader(new FileReader(path));
             String c = file.readLine();
             c = file.readLine(); // on saute une ligne
@@ -24,12 +24,11 @@ public class SimplePlayList extends AbstractAudioElement implements Playlist{
             }
         }
         else {
-            File playlist = new File("./Modelisation/src/TD4/",title +".txt");
+            //File playlist = new File("./src/TD4/",title +".txt");
             try {
-                playlist.createNewFile();
-                super.setFile(playlist);
-                BufferedWriter fichier = new BufferedWriter(new FileWriter(title +".txt"));
-                System.out.println("tittre : "+title);
+                getFile().createNewFile();
+                BufferedWriter fichier = new BufferedWriter(new FileWriter(getFile().getPath()));
+                System.out.println("titre : "+title);
                 fichier.write(title);
             } catch (IOException e) {
                 e.printStackTrace();

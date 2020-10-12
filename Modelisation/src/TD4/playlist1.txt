@@ -1,4 +1,4 @@
 Playlist 1
-mils2.0-./Modelisation/src/TD4/chanson/mils20.txt-Ninho-3
-okkkk-./Modelisation/src/TD4/chanson/okok.txt-ok-4
-dddddd-./Modelisation/src/TD4/chanson/dd.txt-Jul-5
+mils2.0-./src/TD4/chanson/mils20.txt-Ninho-3
+okkkk-./src/TD4/chanson/okok.txt-ok-4
+dddddd-./src/TD4/chanson/dd.txt-Jul-5
