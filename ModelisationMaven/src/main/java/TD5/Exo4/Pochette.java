@@ -11,10 +11,10 @@ public class Pochette<A extends Document> {
 
     public Pochette(String theme) {
         this.theme = theme;
-        this.listDoc = new ArrayList<>();
+        this.listDoc = new ArrayList<A>();
     }
 
-    public void transferer(Pochette<? super A> pochette) throws Exception {
+    public void transferer(Pochette<? super A> pochette) throws Exception { // n'accepter que les classe qui sont une superclasse de A qui sont des documents donc
         for (A a: listDoc) {
             pochette.addDoc(a);
         }
